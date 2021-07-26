@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Test Skills</title>
+
+    <style>
+        p {
+          color: purple;
+          margin: 0.5em 0;
+        }
+  
+        * {
+          box-sizing: border-box;
+        }
+  
+        button {
+          display: block;
+          margin: 20px 0 20px 20px;
+          background-color: red;
+          color: white;
+          font-weight: bolder;
+          width: 25%;
+          height: 50px;
+          font-size: larger;
+        }
+      </style>
+
+</head>
+
+<body>
+    
+</body>
+    <section class="preview">
+    </section>
+
+    <button class="off">Machine is off</button>
+    <canvas></canvas>
+
+    </body>
+    <script>
+        let btn = document.querySelector('.off');
+
+        // Add your code here
+        btn.addEventListener('click', function (e){
+
+          if (e.target.textContent === 'Machine is off'){
+              e.target.textContent = 'Machine is on';
+              e.target.style.backgroundColor = 'green';  
+          }else{
+              e.target.textContent = 'Machine is off';
+              e.target.style.backgroundColor = 'red';
+          }
+  
+        });
+
+        // Events 2
+        let canvas = document.querySelector('canvas');
+        let ctx = canvas.getContext('2d');
+
+        function drawCircle(x, y, size) {
+          ctx.fillStyle = 'white';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+          ctx.beginPath();
+          ctx.fillStyle = 'black';
+          ctx.arc(x, y, size, 0, 2 * Math.PI);
+          ctx.fill();
+        }
+
+        let x = 50;
+        let y = 50;
+        const size = 30;
+
+        drawCircle(x, y, size);
+        
+        // Add your code here
+        document.addEventListener('keydown', moveCircle);
+            
+        function moveCircle(e){
+          
+          if (e.code.toString() === 'KeyW'){
+            y -= 5;
+            drawCircle(x, y, size);
+          }else if(e.code.toString() === 'KeyA'){
+            x -= 5;
+            drawCircle(x, y, size);
+          }else if(e.code.toString() === 'KeyS'){
+            y += 5;
+            drawCircle(x, y, size);
+          }else if(e.code.toString() === 'KeyD'){
+            x += 5;
+            drawCircle(x, y, size);
+          }
+        }
+
+
+    </script>
+</html>

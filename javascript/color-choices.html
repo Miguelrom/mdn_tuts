@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More color choices!</title>
+</head>
+
+<body>
+    <div class="output" style="height: 300px;">
+        <label for="theme">Select theme: </label>
+        <select id="theme">
+          <option value="White">White</option>
+          <option value="Black">Black</option>
+          <option value="Purple">Purple</option>
+          <option value="Yellow">Yellow</option>
+          <option value="Psychedelic">Psychedelic</option>
+        </select>
+      
+        <h1>This is my website</h1>
+      </div>
+      
+      <script>
+        const select = document.querySelector('select');
+        const html = document.querySelector('.output');
+
+        select.onchange = function() {
+        const choice = select.value;
+
+            // ADD SWITCH STATEMENT
+            switch (choice){
+
+                case 'White': update('white', 'black');
+                        break;
+                case 'Black': update('black', 'white');
+                        break;
+                case 'Purple': update('purple', 'white');
+                        break;
+                case 'Yellow': update('yellow', 'white');
+                        break;
+                case 'Psychedelic': update('blue', 'yellow');
+                        break;
+
+            }
+        }
+
+            function update(bgColor, textColor) {
+                html.style.backgroundColor = bgColor;
+                html.style.color = textColor;
+        }
+    </script>
+    
+</body>
+
+</html>
