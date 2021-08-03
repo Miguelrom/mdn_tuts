@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <style>
+    p {
+      font-family: sans-serif;
+    }
+  </style>
+
+</head>
+<body>
+  <p class="clock">00:00:00</p>
+  <button type="button" id="start">Start</button>
+  <button type="button" id="stop">Stop</button>
+  <button type="button" id="reset">Reset</button>
+
+  <script>
+    const startbtn = document.getElementById('start');
+    const stopbtn = document.getElementById('stop');
+    const resetbtn = document.getElementById('reset');
+
+    let time = 0; //Time in seconds
+    let watch = null;
+
+    startbtn.onclick = function (e) {
+
+      startbtn.disabled = true;
+      watch = setInterval(displayTime, 100);
+
+    }
+
+    function displayTime(){
+
+      let hr = Math.floor(time / 3600);
+      let min = Math.floor((time % 3600) / 60);
+      let sec = Math.floor(time % 60);
+
+      document.querySelector('.clock').textContent = hr.toString().padStart(2, '0') + ':' + 
+      min.toString().padStart(2, '0') + ':' + sec.toString().padStart(2, '0');
+
+      time++;
+    }
+
+    stopbtn.onclick = function (){
+
+      clearInterval(watch); 
+      startbtn.disabled = false;
+    }
+
+    resetbtn.onclick = function () {
+
+      time = 0;
+      clearInterval(watch);
+      startbtn.disabled = false;
+      displayTime();
+    }
+
+</script>
+
+</body>
+</html>
