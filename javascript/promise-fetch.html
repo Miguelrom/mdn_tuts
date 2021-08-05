@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promises & Fetch</title>
+</head>
+<body>
+  <script>
+    let promise = fetch('coffee.jpg');
+
+    let promise2 = promise.then(respond => {
+      if (respond.ok){
+        console.log(respond.headers.get('content-type'));
+        return respond.blob();
+      }else{
+        throw new Error(`HTTP error. Status: ${respond.status}`);
+      }
+    });
+
+    let promise3 = promise2.then(myBlob => {
+      let objectURL = URL.createObjectURL(myBlob);
+      let image = document.createElement('img');
+      image.src = objectURL;
+      document.body.appendChild(image); 
+    });
+
+    let errorCase = promise3.catch(e => {
+      console.log('There has been a problem with your fetch operation: ' + 
+      e.message);
+    });
+
+  </script>
+  
+</body>
+</html>
