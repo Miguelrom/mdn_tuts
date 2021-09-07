@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test skills: Other controls</title>
+  <style>
+    body {
+      background-color: #fff;
+      color: #333;
+      font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+      padding: 1em;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      line-height: 2em;
+    }
+  </style>
+</head>
+<form>
+  <ul>
+    <li>
+      <label for="food">Enter your favorite food:</label>
+      <input type="text" name="food" id="food" list="food-options">
+      <datalist id="food-options">
+        <option>Salad</option>
+        <option>Curry</option>
+        <option>Pizza</option>
+        <option>Fajitas</option>
+        <option>Biscuits</option>
+        <option>Crisps</option>
+        <option>Fruit</option>
+        <option>Breadsticks</option>
+      </datalist>
+    </li>
+    <li>
+      <button>Submit choice</button>
+    </li>
+  </ul>
+</form>
+</body>
+</html>
