@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  --fg-color: black;
+  --my-border: 1px solid black;
+  --page-title-height: 58px;
+  --side-bar-width: 300px;
+}
+
+body {
+  font-family: arial, x-locale-body, sans-serif;
+  font-size: 1.8rem;
+}
+
+nav {
+  border-right: solid hsl(0, 0%, 80%);
+  height: 100vh;
+  width: var(--side-bar-width);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  height: calc(100vh - var(--page-title-height));
+  overflow-y: scroll;
+}
+
+h1 {
+  font-size: 3.2rem;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+nav li {
+  border-top: var(--my-border);
+  padding: 10px 30px;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: var(--fg-color);
+}
+
+main {
+  position: relative;
+  left: var(--side-bar-width);
+  /* The scrollbar of the sidebar is about 2vw wide*/
+  width: calc(98vw - var(--side-bar-width));
+  padding: 30px 30px;
+}
+
+.content {
+  margin: 20px 20px;
+}
+
+p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+p + p {
+  margin-top: 20px;
+}
+
+.content ul {
+  list-style: square outside;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.content ol {
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+content ul ::marker {
+  font-size: 25px;
+}
+
+pre {
+  background-color: hsl(0, 0%, 80%);
+  margin: 10px auto;
+}
+
+@media (max-width: 820px) {
+
+  nav {
+    height: 300px;
+    width:  98vw;
+    position: static;
+  }
+  
+  nav ul {
+    height: calc(300px - var(--page-title-height));
+  }
+
+  main {
+    position: static;
+    width: 100%;
+    padding: 30px 30px;
+  }
+
+  .content {
+    margin: 20px 20px;
+  }
+  
+}/*End media query*/
+
