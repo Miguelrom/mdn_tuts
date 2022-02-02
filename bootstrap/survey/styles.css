@@ -2,20 +2,6 @@
   border: 2px solid black;
 }
 
-.gray-border {
-  border: 2px solid #eee;
-}
-
-/* body {
-  background-color: #eee;
-} */
-
-/* .my-bg {
-  position: relative;
-  color: blue;
-  background-color: cadetblue;
-} */
-
 .big-font {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
