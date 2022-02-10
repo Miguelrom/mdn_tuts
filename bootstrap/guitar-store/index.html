@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <!-- jQuery -->
+  <script defer src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS-->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Additional CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <title>Guitar store with Bootstrap</title>
+</head>
+<body id="home">
+  <header id="header" class="fixed-top px-2">
+    <nav class="navbar navbar-expand-lg">
+      <div class="navbar-brand">
+        <img class="img-fluid align-top" width="48" height="48" src="https://images.emojiterra.com/google/android-10/512px/1f3b8.png" alt="Electric guitar logo">
+        <h1 class="d-inline-block"><a href="#home">Mike's Guitars</a></h1>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation-items">
+        <i id="toggler-icon" class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navigation-items">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#electrics">Electric guitars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#acoustics">Acoustic guitars</a>
+          </li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link" href="#basses">Basses</a>
+          </li>
+        </ul>
+        <form action="#" class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search">
+          <button class="btn btn-outline-dark" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <!--End navbar-->
+  </header>
+
+  <section id="subscribe" class="">
+    <form action="https://www.freecodecamp.com/email-submit" id="email-form" class="p-3 m-auto shadow-lg">
+      <div class="form-group">
+        <h2>Subscribe to our newsletter!</h2>
+        <input class="form-control" name="email" type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <button class="btn btn-primary btn-block" type="submit">Send</button>
+    </form>
+  </section>
+
+  <div class="container text-center">
+
+    <section id="electrics" class="">
+      <h2 class="font-weight-bold mb-3 category-title">Electric Guitars</h2>
+
+      <row class="row row-cols-1 row-cols-md-2 row-cols-lg-3 ">
+        <div class="col mb-4">
+          <div class="card border-dark">
+            <h4 class="card-header">Fender Stratocaster</h4>
+            <div class="image-frame">
+              <img class="card-img-top pt-3 product-img" src="https://upload.wikimedia.org/wikipedia/commons/6/63/Fender_Stratocaster_004-2.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Price: $1, 200 USD</p>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card border-dark">
+            <h4 class="card-header">Gibson Les Paul</h4>
+            <div class="image-frame">
+              <img class="card-img-top pt-3 product-img" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Gibson_LP_Classic.png" alt="">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Price: $2, 600 USD</p>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card border-dark">
+            <h4 class="card-header">Ibanez Jem</h4>
+            <div class="image-frame">
+              <img class="card-img-top product-img pt-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Ibanez_Jem_7VWH_vertical.png/1200px-Ibanez_Jem_7VWH_vertical.png" alt="">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Price: $970 USD</p>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+      </row>
+    </section>
+
+    <section id="acoustics" class="">
+      <h2 class="font-weight-bold mb-3 category-title">Acoustic Guitars</h2>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        <div class="col mb-4">
+          <div class="card border-dark">
+            <h4 class="card-header">Martin guitar</h4>
+            <div class="image-frame">
+              <img class="card-img-top product-img pt-3" src="https://upload.wikimedia.org/wikipedia/commons/4/4d/C.F._Martin_GRH_160_or_000-16RGT_cropped.png" alt="">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Price: $630 USD</p>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card border-dark">
+            <h4 class="card-header">Yamaha classical guitar</h4>
+            <div class="image-frame">
+              <img class="card-img-top product-img pt-3" src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Spanish_guitar.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Price: $350 USD</p>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card border-dark">
+            <h4 class="card-header">Taylor guitar</h4>
+            <div class="image-frame">
+              <img class="card-img-top product-img pt-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Guitar_1.jpg/305px-Guitar_1.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Price: $800 USD</p>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="basses" class="">
+      <h2 class="font-weight-bold mb-3 category-title">Basses</h2>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        <div class="col mb-4">
+          <div class="card border-dark">
+            <h4 class="card-header">Fender Jazz Bass</h4>
+            <div class="image-frame">
+              <img class="card-img-top product-img pt-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/70%27s_Fender_Jazz_Bass.png/125px-70%27s_Fender_Jazz_Bass.png" alt="">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Price: $670 USD</p>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card border-dark">
+            <h4 class="card-header">Rickenbacker bass</h4>
+            <div class="image-frame">
+              <img class="card-img-top product-img pt-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Rickenbacker_Bass_4001JG.jpg/170px-Rickenbacker_Bass_4001JG.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Price: $1, 200 USD</p>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-dark">
+            <h4 class="card-header">Gibson bass</h4>
+            <div class="image-frame">
+              <img class="card-img-top product-img pt-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Gibson_eb3_67.jpg/170px-Gibson_eb3_67.jpg" alt="">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Price: $840 USD</p>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- End container -->
+
+  <section id="video" class="text-center d-none d-sm-block py-5">
+    <h2 class="font-weight-bold mb-4">Featured guitar review</h2>
+    <iframe src="https://www.youtube.com/embed/nne4d1Fglos"></iframe>
+  </section>
+
+  <footer class="container-fluid text-center py-4">
+    <div class="row">
+      <div class="col-lg-2 col-md-6 order-md-1 order-lg-1 text-lg-right"><a href="#">Privacy Policy</a></div>
+      <div class="col-lg-2 col-md-6 order-md-3 order-lg-2 text-lg-center"><a href="#">Terms & Conditions</a></div>
+      <div class="col-lg-2 col-md-6 order-md-5 order-lg-3 text-lg-left"><a href="#">About us</a></div>
+      <div class="col d-md-none separator"></div>
+      <div class="col-lg-2 col-md-6 px-0 order-md-2 order-lg-4 text-lg-right">Copyright &copy; 2021</div>
+      <div class="col-lg-2 col-md-6 px-0 order-md-4 order-lg-5 text-lg-center">Mike's Guitars LTD</div>
+      <div class="col-lg-2 col-md-6 px-0 order-md-6 order-lg-6 text-lg-left">All Rights Reserved</div>
+    </div>
+  </footer>
+
+</body>
+</html>
