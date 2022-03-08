@@ -1,0 +1,58 @@
+.debug-border {
+  border: 2px solid black;
+}
+
+body {
+  font-size: 20px;
+}
+
+nav {
+  height: 100vh;
+  width: 25vw;
+  border-right: 4px solid lightgray;
+}
+nav header {
+  height: 58px;
+  overflow: hidden;
+  border-bottom: 2px solid lightgray;
+}
+nav ul {
+  height: calc(97vh - 58px);
+  overflow-y: scroll;
+}
+nav ul li {
+  width: 100%;
+  border-top: 2px solid lightgray;
+}
+nav ul li a {
+  color: black;
+}
+
+@media (max-width: 1095px) {
+  nav header {
+    height: 88px;
+  }
+}
+main {
+  position: relative;
+  left: 25vw;
+  width: 73vw;
+}
+main h2 {
+  font-weight: bold;
+}
+
+.chapter-header {
+  margin-bottom: 20px;
+}
+
+.chapter-content {
+  margin-left: 20px;
+  text-align: justify;
+}
+
+pre {
+  background-color: lightgray;
+}
+
+/*# sourceMappingURL=styles.css.map */

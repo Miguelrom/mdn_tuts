@@ -1,0 +1,74 @@
+.debug-border {
+  border: 2px solid black;
+}
+
+$header-height: 58px;
+$sidebar-width: 25vw;
+
+body {
+  font-size: 20px;
+}
+
+nav {
+
+  height: 100vh;
+  width: $sidebar-width;
+  border-right: 4px solid lightgray;
+
+  header {
+    height: $header-height;
+    overflow: hidden;
+    border-bottom: 2px solid lightgray;
+  }
+
+  ul {
+
+    height: calc(97vh - $header-height);
+    overflow-y: scroll;
+
+    li {
+      width: 100%;
+      border-top: 2px solid lightgray;
+
+      a {
+        color: black;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 1095px) {
+  $header-height: 88px;
+
+  nav {
+    header {
+      height: $header-height;
+    }
+  }
+}
+
+main {
+  position: relative;
+  left: $sidebar-width;
+  width: calc(98vw - $sidebar-width);
+
+  h2 {
+    font-weight: bold;
+  }
+}
+
+.chapter-header {
+  margin-bottom: 20px;
+}
+
+.chapter-content {
+  margin-left: 20px;
+  text-align: justify;
+}
+
+pre {
+  background-color: lightgray;
+}
+
+
