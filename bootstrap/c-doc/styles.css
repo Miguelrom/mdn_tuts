@@ -28,7 +28,7 @@ nav ul li a {
   color: black;
 }
 
-@media (max-width: 1095px) {
+@media (max-width: 1145px) {
   nav header {
     height: 88px;
   }

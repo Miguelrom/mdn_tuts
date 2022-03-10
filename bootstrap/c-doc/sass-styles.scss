@@ -22,7 +22,6 @@ nav {
   }
 
   ul {
-
     height: calc(97vh - $header-height);
     overflow-y: scroll;
 
@@ -38,7 +37,7 @@ nav {
 
 }
 
-@media (max-width: 1095px) {
+@media (max-width: 1145px) {
   $header-height: 88px;
 
   nav {
